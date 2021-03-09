@@ -23,7 +23,7 @@ if __name__ == "__main__":
     kafka_df = spark.readStream \
         .format("kafka") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
-        .option("subscribe", "view") \
+        .option("subscribe", "view2") \
         .option("startingOffsets", "earliest") \
         .load()
 #Data in kafka topic have key-value format, from_json is used to deserialize json value from string
