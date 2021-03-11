@@ -62,6 +62,7 @@ if __name__ == "__main__":
 #Map current dataframe with created dictionary to replace product_id with category name
     output_df = output_df.na.replace(dict, 1)
 #Write spark stream to console or csv sink
+
     window_query = output_df.writeStream \
     .format("console") \
     .outputMode("complete") \
